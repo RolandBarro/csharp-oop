@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charp-OOP.BL", "Charp-OOP.BL\Charp-OOP.BL.csproj", "{8B42B32D-FB01-43D1-9BCA-406926D864B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B72481DB-655D-4874-A696-B5144ACB7381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpOOP.BLTest", "ContactTests\CsharpOOP.BLTest.csproj", "{0FD4A1AE-CE63-4E06-A1ED-8EAA534915CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{8B42B32D-FB01-43D1-9BCA-406926D864B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B42B32D-FB01-43D1-9BCA-406926D864B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B42B32D-FB01-43D1-9BCA-406926D864B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD4A1AE-CE63-4E06-A1ED-8EAA534915CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD4A1AE-CE63-4E06-A1ED-8EAA534915CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD4A1AE-CE63-4E06-A1ED-8EAA534915CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD4A1AE-CE63-4E06-A1ED-8EAA534915CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FD4A1AE-CE63-4E06-A1ED-8EAA534915CB} = {B72481DB-655D-4874-A696-B5144ACB7381}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {361D68BE-9445-4141-8CF4-8381D4F424AE}

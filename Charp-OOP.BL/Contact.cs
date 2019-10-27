@@ -13,7 +13,18 @@ namespace Charp_OOP.BL
         public string LastName { get; set; }
         public string GetFullName()
         {
-            return LastName + ", " + FirstName;
+            string fullName = LastName;
+            if (!string.IsNullOrWhiteSpace(FirstName))
+            {
+                if (!string.IsNullOrWhiteSpace(fullName))
+                {
+                    fullName += ", ";
+                }
+
+                fullName += FirstName;
+            }
+
+            return fullName;
         }
 
     }
