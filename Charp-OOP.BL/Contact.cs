@@ -8,6 +8,13 @@ namespace Charp_OOP.BL
 {
     public class Contact
     {
+        public Contact()
+        {
+        }
+        public Contact(int id)
+        {
+            Id = id;
+        }
         public int Id { get; private set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
