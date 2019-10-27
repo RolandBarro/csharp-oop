@@ -11,7 +11,7 @@ namespace ContactTests
         public void FullNameTestValid()
         {
             // -- Arrange
-            Contact contact = new Contact
+            var contact = new Contact
             {
                 FirstName = "Roland",
                 LastName = "Barro"
@@ -62,7 +62,6 @@ namespace ContactTests
 
             // -- Assert
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestMethod]
@@ -86,7 +85,58 @@ namespace ContactTests
 
             // -- Assert
             Assert.AreEqual(2, count);
+        }
 
+        [TestMethod]
+        public void ContactCompleteDataEntryValidationTest()
+        {
+            // -- Arrange
+            var contact = new Contact
+            {
+                FirstName = "Roland",
+                LastName = "Barro",
+                EmailAddress = "rolandbarro@gmail.com"
+            };
+
+            // -- Act
+            var isValid = contact.Validate();
+
+            // -- Assert
+            Assert.IsTrue(isValid);
+        }
+
+        [TestMethod]
+        public void ContactNoEmailValidationTest()
+        {
+            // -- Arrange
+            var contact = new Contact
+            {
+                FirstName = "Roland",
+                LastName = "Barro"
+            };
+
+            // -- Act
+            var isValid = contact.Validate();
+
+            // -- Assert
+            Assert.IsFalse(isValid);
+        }
+
+        [TestMethod]
+        public void ContactNoLastNameValidationTest()
+        {
+            // -- Arrange
+            var contact = new Contact
+            {
+                FirstName = "Roland",
+                EmailAddress= "rolandbarro@gmail.com",
+            };
+
+            // -- Act
+            var isValid = contact.Validate();
+
+            // -- Assert
+            Assert.IsFalse(isValid);
         }
     }
 }
