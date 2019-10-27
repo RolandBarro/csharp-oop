@@ -27,5 +27,6 @@ namespace Charp_OOP.BL
             return fullName;
         }
 
+        public static int InstanceCount { get; set; }
     }
 }

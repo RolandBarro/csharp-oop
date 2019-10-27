@@ -64,5 +64,29 @@ namespace ContactTests
             Assert.AreEqual(expected, actual);
 
         }
+
+        [TestMethod]
+        public void InstanceCountTest()
+        {
+            // -- Arrange
+            var contact1 = new Contact
+            {
+                FirstName= "Roland"
+            };
+            Contact.InstanceCount += 1;
+
+            var contact2 = new Contact
+            {
+                FirstName = "Florable"
+            };
+            Contact.InstanceCount += 1;
+
+            // -- Act
+            int count = Contact.InstanceCount;
+
+            // -- Assert
+            Assert.AreEqual(2, count);
+
+        }
     }
 }
